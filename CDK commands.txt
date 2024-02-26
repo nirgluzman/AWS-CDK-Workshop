@@ -13,5 +13,18 @@ Project Directory:
 * node_modules is maintained by npm and includes all our project’s dependencies.
 
 
+# The first time we deploy an AWS CDK app into an environment (account/region), we need to install a “bootstrap stack”.
+# This stack includes resources that are used in the toolkit’s operation.
+cdk bootstrap
+
+
 # create a new TypeScript CDK project
 cdk init sample-app --language typescript
+
+
+# synthesize a template from our app -> create an AWS CloudFormation template for each stack defined in our application.
+cdk synth
+
+
+# deploy a CDK app.
+cdk deploy
