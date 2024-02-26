@@ -1,6 +1,7 @@
 import { App, Stack, StackProps } from 'aws-cdk-lib';
 import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
 import { Function, Runtime, Code } from 'aws-cdk-lib/aws-lambda';
+import { HitCounter } from './hitcounter';
 import path = require('path');
 
 export class CdkStack extends Stack {
@@ -14,9 +15,13 @@ export class CdkStack extends Stack {
       handler: 'hello.handler' // file is "hello", function is "handler"
     });
 
+    const helloWithCounter = new HitCounter(this, 'HelloHitCounter', {
+      downstream: hello
+    });
+
     // define an API Gateway REST API resource backed by "hello" function, using Lambda proxy integration.
     new LambdaRestApi(this, 'Endpoint', {
-      handler: hello
+      handler: helloWithCounter.handler
     });
   }
 }
