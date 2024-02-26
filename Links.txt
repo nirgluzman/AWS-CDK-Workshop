@@ -25,3 +25,6 @@ https://aws.amazon.com/solutions/constructs/
 
 Open-source Cloud Development Kit (CDK) libraries
 https://constructs.dev/
+
+AWS Construct Library
+https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html
