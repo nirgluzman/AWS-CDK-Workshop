@@ -28,3 +28,14 @@ cdk synth
 
 # deploy a CDK app.
 cdk deploy
+
+
+# Hotswap deployments
+# Never use hotswap for production deployments !!
+cdk deploy --hotswap
+
+
+# Monitors the code and assets for changes and attempts to perform a deployment automatically
+# when a change is detected.
+cdk watch               --> By default, it use the --hotswap flag, which inspects the changes and determines if those changes can be hotswapped.
+cdk watch --no-hotswap  --> disable the hotswap behavior.
