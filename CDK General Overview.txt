@@ -1,0 +1,33 @@
+AWS Documentation
+https://docs.aws.amazon.com/cdk/v2/guide/home.html
+
+The OUTPUT of CDK is CloudFromation.
+
+CDK App:
+* special root Construct.
+* orchestrates the lifecycle of the Stacks and the Resources within it.
+
+CDK Stack:
+* a CDK Stack becomes a CloudFormation Stack.
+* App can contain multiple Stacks.
+* Stack within the same App can share resources.
+
+CDK Constructs:
+Level-0 - Basic resource
+Level-1 - CloudFormation Resource (1:1)
+Level-2 - Improved L1 Constructs, supported by the CDK team
+Level-3 - Combinations of Constructs
+
+--> Most frequently we use L2/L3 Constructs !!
+
+
+Synthesis
+* Running 'cdk synth' to generate CloudFromation template
+
+Assests
+* Files bundled into CDK apps (Lambda handler code, Docker images).
+* Represents any artifacts taht the app needs to operate.
+
+Bootstraping
+* Running 'cdk bootstrap' deploys a CDKToolkit CloudFormation Stack
+* Creates an S3 Bucket to store Assets in an AWS Account.
