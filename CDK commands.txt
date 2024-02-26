@@ -1,0 +1,17 @@
+
+AWS CDK Toolkit (cdk command)
+https://docs.aws.amazon.com/cdk/v2/guide/cli.html
+
+
+Project Directory:
+* lib/cdk-stack.ts is where our CDK application’s main stack is defined.
+* bin/cdk.ts is the entrypoint of the CDK application. It will load the stack defined in lib/cdk-stack.ts.
+* package.json is our npm module manifest.
+* cdk.json tells the toolkit how to run our app.
+* tsconfig.json our project’s typescript configuration.
+* .gitignore and .npmignore tell git and npm which files to include/exclude from source control and when publishing this module to the package manager.
+* node_modules is maintained by npm and includes all our project’s dependencies.
+
+
+# create a new TypeScript CDK project
+cdk init sample-app --language typescript
